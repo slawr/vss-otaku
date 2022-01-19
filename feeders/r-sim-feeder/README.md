@@ -27,10 +27,19 @@ Advantages/disadvantages:
 
 ### Investigation points
 - [ ] VISS spec states Update method only allows actuator values to be set (makes sense), but this would stop sensor values from being reported by the Simulator. Need to check what VISS implementations do in practice.
-- [ ] CVII needs to consider possible open standard for VISS backend API
+- [ ] CVII needs to consider possible open standard for VISS backend API.
 
 ## GraphQL approaches
+In GraphQL a Resolver performs the fetch needed to complete the query. Two major tasks of a GraphQL data feeder would therefore be data model conversion and the Resolver to supply the queried data to the GraphQL Data Server.
+
+For simple 'fetch' queries the feeder could use a simple state storage internally which holds the last data sent by the simulator. An alternative is to query the simulator directly.
+
+When state storage is replaced by a more functional in-vehicle data store such as a database then richer queries are possible, at the possible complication of more complicated connection between the Resolver and the GraphQL Schema.
 ![GraphQL Resolver](doc/r-sim2graphql.drawio.svg)
+
+### Investigation points
+- [ ] Investigate use of simple state storage to store 'last value' from the Simulator for Resolver access vs querying the Simulator directly.
+- [ ] Is the Resolver API a sufficient data fetch abstraction API or is something nearer to the data store required? For example changing between DB, 'simple' State Storage or 'read' API.
 
 ## In-vehicle data store approaches
 Of course as well as the methods outlined above the Simulator could be interfaced by writing VSS data to an in-vehicle data store such as a Timeseries database. In that approach the Simulator does not need to be interfaced to a specific data server. The connection between the data store and the server takes care of that. This makes it as an area of investigation in its own right and is being investigated in the "in-vehicle-storage" area of this project. See the [README.md](../in-vehicle-storage/README.md)
