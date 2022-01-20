@@ -12,21 +12,25 @@ The VISS specification has an [Update method](https://w3c.github.io/automotive/s
 Advantages/disadvantages:
 
 +ve: Works with any VISS implementation
--ve: Does not scale to high volume data
+
+-ve: Scales less well to high volume data
 
 ### Direct Feed using VISS Backend
-A feeder can be implemented as a backend in the VISS server itself. This has already been successfully implemented in platforms such as [Aos](https://aoscloud.io/) 
-![VISS Backend](doc/r-sim2viss-feeder-viss-backend.drawio.svg)
+A feeder can be implemented as a backend in the VISS server itself. This has already been successfully implemented in platforms such as [Aos](https://aoscloud.io/). As with the relay above conversion between the data models is required. The VSS data is then transported to the appropriate place in the server, most likely written to its data store.
 
+The backend may be an internal plug-in in the server architecture or an external component that writes to the state storage (data store) APIs of the server. In either case the main collaboration point is the need for an open API interfacing the backend to the server.
+
+![VISS Backend](doc/r-sim2viss-feeder-viss-backend.drawio.svg)
 
 Advantages/disadvantages:
 
 +ve: Can more easily scale with data volume
+
 -ve: Currently no open standard for VISS data feeder backend API exists, which leads to unwanted extra development effort to interface any conversion component into each VISS implementation.
 
 
 ### Investigation points
-- [ ] VISS spec states Update method only allows actuator values to be set (makes sense), but this would stop sensor values from being reported by the Simulator. Need to check what VISS implementations do in practice.
+- [ ] VISS spec states Update method only allows actuator values to be set, but this would stop sensor values from being reported by the Simulator. Need to check what VISS implementations do in practice and raise discussion in VISS community.
 - [ ] CVII needs to consider possible open standard for VISS backend API.
 
 ## GraphQL approaches
@@ -34,8 +38,12 @@ In GraphQL a Resolver performs the fetch needed to complete the query. Two major
 
 For simple 'fetch' queries the feeder could use a simple state storage internally which holds the last data sent by the simulator. An alternative is to query the simulator directly.
 
-When state storage is replaced by a more functional in-vehicle data store such as a database then richer queries are possible, at the possible complication of more complicated connection between the Resolver and the GraphQL Schema.
 ![GraphQL Resolver](doc/r-sim2graphql.drawio.svg)
+
+When state storage is replaced by a more functional in-vehicle data store such as a database then richer queries are possible, at the possible complication of more complicated connection between the Resolver and the GraphQL Schema.
+
+Covesa has a collection of GraphQL components, e.g. [GraphQL Data Server](https://github.com/COVESA/graphql-vss-data-server) that would be an obvious implementation starting point.
+
 
 ### Investigation points
 - [ ] Investigate use of simple state storage to store 'last value' from the Simulator for Resolver access vs querying the Simulator directly.
