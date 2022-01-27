@@ -47,7 +47,7 @@ Covesa has a collection of GraphQL components, e.g. [GraphQL Data Server](https:
 
 ### Investigation points
 - [ ] Investigate use of simple state storage to store 'last value' from the Simulator for Resolver access vs querying the Simulator directly.
-- [ ] Is the Resolver API a sufficient data fetch abstraction API or is something nearer to the data store required? For example changing between DB, 'simple' State Storage or 'read' API.
+- [ ] Is the Resolver API a sufficient data fetch abstraction API or is something nearer to the data store required? For example changing between DB, 'simple' State Storage or 'read sensor/actuator' API.
 
 ## In-vehicle data store approaches
-Of course as well as the methods outlined above the Simulator could be interfaced by writing VSS data to an in-vehicle data store such as a Timeseries database. In that approach the Simulator does not need to be interfaced to a specific data server. The connection between the data store and the server takes care of that. This makes it as an area of investigation in its own right and is being investigated in the "in-vehicle-storage" area of this project. See the [README.md](../in-vehicle-storage/README.md)
+Of course as well as the methods outlined above the Simulator could be interfaced by writing VSS data to an in-vehicle data store such as a Timeseries database. In that approach the Simulator does not need to be interfaced to a specific data server. The connection between the data store and the server takes care of that. This makes it an area of investigation in its own right and is being investigated in the "in-vehicle-storage" area of this project. See the [README.md](../in-vehicle-storage/README.md)
