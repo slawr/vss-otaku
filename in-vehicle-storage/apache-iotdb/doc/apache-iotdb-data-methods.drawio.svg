@@ -1,67 +1,88 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="531px" height="216px" viewBox="-0.5 -0.5 531 216" content="&lt;mxfile&gt;&lt;diagram id=&quot;1erB-qLQphccdz-vIiyz&quot; name=&quot;Page-1&quot;&gt;zZdbb9sgFMc/jaXtYZMNsZM8rrlslXap5KprH4l9ZqMRExFy26cfLvgW7CVbvLQvCecP2Jw/vxOIgyfL/UdBVukXHgNzkBvvHTx1EBoHY/WZCwctDEeeFhJBYy3VhJD+AiO6Rt3QGNaNgZJzJumqKUY8yyCSDY0IwXfNYT84a751RRKwhDAizFa/01imWh2hYaV/ApqkxZu9IuElKQabTNYpifmuJuGZgyeCc6lby/0EWO5d4YueN+/oLRcmIJPnTMBmyVvCNiY5szB5KLIVfJPFkE/wHHyzS6mEcEWivHentldpqVwy020eB0LCvnNNXpmpIgT4EqQ4qCFmQmC8MXAg7Ot4V1mNB2ZMWrN5bDRidjcpn1wZoBrGgw4/glfvh1dUwSk/PLcHQzxkGXIfvptTZQZyP9zdWu5ArErFhBnPoGkH7Kl8rLWfVNt975tommfsFsGhCDK15sd6UJuVh9W056gx7w4EVUmDMGKH+SoFvhGRycEAJ4lIoKxhreXp/XHTBDAi6bb5S3HJDvjWBtzy+6lKxJ0SSdTXHCBW+XVj6p6LaYstFrmdmI6OMMU2ph5qwTTog9KxZVJ4yKJrwKmCY8Zisk7L34ezgCvoahA3fCniitW01XzA1PJuFgq3IMlbbx7C8K3lszrWVnkzOjCqIBT4NIELjevnRSmQ6GfyDPG3jVSPAaOv9XXA8/vBFnuDJrfI5jZowXbUB7b26VvUdghi+wqKejB8warG2LLnqyb99NHDhUx5wjPCZpXaKPbyVKkOkqd6X8ep0lqUJwsco64Cv0I9Fy9vwWzCaL7sHjC76IqD/GYRIv+amPl9kfR395N/JGlgk6Q3+BokDTpJ6v0ychFQR5eR/8mTCqv/a899tT+9ePYb&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="748px" height="331px" viewBox="-0.5 -0.5 748 331" content="&lt;mxfile&gt;&lt;diagram id=&quot;1erB-qLQphccdz-vIiyz&quot; name=&quot;Page-1&quot;&gt;5Vldb9owFP01SNtDq3yQAI8ttFulfVRi2rpHk5jEqomRYwbs188mdohjh1II0GovYN/ETnzuOfdeOx1/OFt9omCefiUxxB3PiVcdf9TxvEE44L/CsC4Mvb5bGBKK4sJUMYzRXyiNjrQuUAxz7UZGCGZorhsjkmUwYpoNUEqW+m1TgvWnzkECDcM4Ati0/kIxSwtr3+tt7Z8hSlL1ZFcteAbUzXIleQpisqyY/LuOP6SEsKI1Ww0hFtgpXIpx9w1XyxejMGP7DOj6xYg/AC/k4uSLsbVaLSWLLIZigNvxb5cpYnA8B5G4uuTu5baUzbC8HIM8Le+Vc0PK4KrxBd1y2ZwukMwgo2t+ixzQk0BJpvRld7mFPXCkLa1CroxAujopZ96iwRsSkAZwugY4D+THiC8rxPw5txPKW4lo/Rhf3SOOl+fcPD4YAMKYs0d2M5JBHTG4Quyp0v7N2851IHsjgYOjOmvVyfhSnqqdyijR3Q7b9LRxj5AijgWk0li8r3hJzUc5WdBImrqSvwzQBEqIu729fUkhBgz90ec/xjOBY3jmw8/x+ONO6AllKUlIBvDd1lr1RAMQxgJr2AQWbAZnAkI9vALEkGRccTki2SYs8h+OzA5ROy+LugUdD3Qdl/qsCNn1LEIO29BxaIBUCrau5PE6i45j0UF65p1DZNmzUK9/OVmq99kHaLteeT6ci2a0xojzk/ovk3NSMPnLpDSA6DnZ8Pv7gvFpoLTnRR3hBu0wusw7a53hFUaHFkL3WyB02G+Hos5rKHpgyjksqIYWZhe2c9C435T3nTGknDQXj6ZheMlwOmiCp4bKCzjooLWAitfvXg6VwDNQMUWaxTdi+yECHAZ5jqKaLk+uMS1TBHY0tdraBEvZ9padfMIjQfxlSmd1awz2az4oooEcVN3B1Ofp1QYWSzQGbvxXrnI/l76zzVHZP8vuKDB3R+1kpdcUTgCjJBNy4oiJyqltCWk5yWnKSe1WW3ae93zd2X5dMO3xPtx73/utWFHztvcLmECsu9lwmZAAigC+kRdmKI433KCQl2xgsplP+Ggu1rZZbXDbCUa7NCRPfuTgTnneUvVTQeBGcV05113X0TPKldtK7LvyBtZp1QxkOs3h0dHL3Bqebo9c1UkQWnRiwf9shwXm9u9d7JFtO4qTlS9qDkvNO8QIypjylqq788Lj7pHszlvdVeWlKL4Hmhep7nzv2OpOlYmD02U9M17eo2RBefuGm5UaNoHCGQEG+N89hLHYDjqLHGUJ/68dBDsgi8Wu0XaoxJXAdILkjJJnOCSYiDMgeVI8RRjXTCqDYjhlu/KnTaG6LLWCdEoypvKAovsxgq1X+Ba9dn0LBeuFzUF6NWP+651ZD4DSmzuLnv/Nq77li8zpvGqeL77xg5lTJine3X4oLALe9murf/cP&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
-        <rect x="0" y="125" width="340" height="90" rx="13.5" ry="13.5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
-        <rect x="0" y="0" width="340" height="100" rx="15" ry="15" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
-        <path d="M 140 50 L 247.63 50" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 252.88 50 L 245.88 53.5 L 247.63 50 L 245.88 46.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="37" y="0" width="500" height="100" rx="15" ry="15" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-dasharray="3 3" pointer-events="all"/>
+        <path d="M 371 50 L 460.63 50" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 465.88 50 L 458.88 53.5 L 460.63 50 L 458.88 46.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 50px; margin-left: 197px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 50px; margin-left: 419px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                IoTDB
+                                <br/>
                                 TS-File API
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="197" y="53" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px" text-anchor="middle">
-                    TS-File API
+                <text x="419" y="53" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    IoTDB...
                 </text>
             </switch>
         </g>
-        <rect x="20" y="20" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 177 50 L 244.63 50" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 249.88 50 L 242.88 53.5 L 244.63 50 L 242.88 46.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 50px; margin-left: 21px;">
-                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                IoTDB Data Feeder
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 50px; margin-left: 214px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                (VSS)
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="80" y="54" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    IoTDB Data Feeder
+                <text x="214" y="53" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    (VSS)
                 </text>
             </switch>
         </g>
-        <path d="M 314 50 L 403.63 50" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
-        <path d="M 408.88 50 L 401.88 53.5 L 403.63 50 L 401.88 46.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="57" y="20" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 50px; margin-left: 362px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 50px; margin-left: 58px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Conversion to VSS
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="117" y="54" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Conversion to VSS
+                </text>
+            </switch>
+        </g>
+        <path d="M 527 50 L 620.63 50" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 625.88 50 L 618.88 53.5 L 620.63 50 L 618.88 46.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 50px; margin-left: 577px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                TS-File
+                                <br/>
                                 Sync
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="362" y="53" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px" text-anchor="middle">
-                    Sync
+                <text x="577" y="53" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    TS-File...
                 </text>
             </switch>
         </g>
-        <path d="M 254 25 C 254 16.72 267.43 10 284 10 C 291.96 10 299.59 11.58 305.21 14.39 C 310.84 17.21 314 21.02 314 25 L 314 75 C 314 83.28 300.57 90 284 90 C 267.43 90 254 83.28 254 75 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
-        <path d="M 314 25 C 314 33.28 300.57 40 284 40 C 267.43 40 254 33.28 254 25" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 467 25 C 467 16.72 480.43 10 497 10 C 504.96 10 512.59 11.58 518.21 14.39 C 523.84 17.21 527 21.02 527 25 L 527 75 C 527 83.28 513.57 90 497 90 C 480.43 90 467 83.28 467 75 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 527 25 C 527 33.28 513.57 40 497 40 C 480.43 40 467 33.28 467 25" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 63px; margin-left: 255px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 63px; margin-left: 468px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
                                 TS-File
@@ -71,16 +92,16 @@
                         </div>
                     </div>
                 </foreignObject>
-                <text x="284" y="66" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                <text x="497" y="66" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
                     TS-File...
                 </text>
             </switch>
         </g>
-        <rect x="410" y="20" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="627" y="20" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 50px; margin-left: 411px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 50px; margin-left: 628px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
                                 IoTDB Server
@@ -88,34 +109,91 @@
                         </div>
                     </div>
                 </foreignObject>
-                <text x="470" y="54" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                <text x="687" y="54" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
                     IoTDB Server
                 </text>
             </switch>
         </g>
-        <path d="M 314 170 L 460 170 Q 470 170 470 160 L 470 86.37" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 470 81.12 L 473.5 88.12 L 470 86.37 L 466.5 88.12 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="251" y="20" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 170px; margin-left: 437px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 50px; margin-left: 252px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                IoTDB
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="311" y="54" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    IoTDB
+                </text>
+            </switch>
+        </g>
+        <path d="M 7 50 L 50.63 50" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 55.88 50 L 48.88 53.5 L 50.63 50 L 48.88 46.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="37" y="190" width="500" height="100" rx="15" ry="15" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-dasharray="3 3" pointer-events="all"/>
+        <path d="M 371 240 L 620.63 240" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 625.88 240 L 618.88 243.5 L 620.63 240 L 618.88 236.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 241px; margin-left: 418px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                IoTDB
+                                <br/>
                                 Native API
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="437" y="173" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px" text-anchor="middle">
-                    Native API
+                <text x="418" y="244" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    IoTDB...
                 </text>
             </switch>
         </g>
-        <rect x="194" y="140" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 177 240 L 244.63 240" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 249.88 240 L 242.88 243.5 L 244.63 240 L 242.88 236.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 170px; margin-left: 195px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 240px; margin-left: 214px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                (VSS)
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="214" y="243" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    (VSS)
+                </text>
+            </switch>
+        </g>
+        <rect x="57" y="210" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 240px; margin-left: 58px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Conversion to VSS
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="117" y="244" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Conversion to VSS
+                </text>
+            </switch>
+        </g>
+        <rect x="251" y="210" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 240px; margin-left: 252px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
                                 IoTDB Client
@@ -123,27 +201,61 @@
                         </div>
                     </div>
                 </foreignObject>
-                <text x="254" y="174" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                <text x="311" y="244" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
                     IoTDB Client
                 </text>
             </switch>
         </g>
-        <path d="M 140 170 L 187.63 170" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 192.88 170 L 185.88 173.5 L 187.63 170 L 185.88 166.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
-        <rect x="20" y="140" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 7 240 L 50.63 240" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 55.88 240 L 48.88 243.5 L 50.63 240 L 48.88 236.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="7" y="110" width="430" height="30" fill="none" stroke="none" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 170px; margin-left: 21px;">
-                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                IoTDB Data Feeder
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 428px; height: 1px; padding-top: 125px; margin-left: 9px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">
+                                Figure: IoTDB VSS Data Feeder using TS-File API and Sync
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="80" y="174" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    IoTDB Data Feeder
+                <text x="9" y="129" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" font-weight="bold">
+                    Figure: IoTDB VSS Data Feeder using TS-File API and Sync
+                </text>
+            </switch>
+        </g>
+        <rect x="7" y="300" width="430" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 428px; height: 1px; padding-top: 315px; margin-left: 9px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">
+                                Figure: IoTDB VSS Data Feeder using IoTDB Client and Native API
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="9" y="319" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" font-weight="bold">
+                    Figure: IoTDB VSS Data Feeder using IoTDB Client and Native API
+                </text>
+            </switch>
+        </g>
+        <rect x="627" y="210" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 240px; margin-left: 628px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                IoTDB Server
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="687" y="244" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    IoTDB Server
                 </text>
             </switch>
         </g>
