@@ -22,29 +22,22 @@ In combination this allows for very flexible deployment in a variety of architec
 The IoTDB suite also provides support for JDBC but this is not recommended due to its poor write performance compared to the Session and TS-File APIs.
 
 ### Deployment illustration: VSS Data Store for Data Server
+The figure shows Apache IoTDB acting as the storage backend for a VSS Data Store. VSS Data Feeders write to the DB using one of the two methods described above, synchronising IoTDB TS-Files or via a client. The VSS Data Store can then be connected to a VSS Data Server, which abstracts the details away from the higher level APIs querying VSS data.
+
 ![VSS Data Store for Data Server](doc/apache-iotdb-dataserver-store.drawio.svg)
 
 ### Deployment illustration: Zonal VSS Data Stores
+A common automotive architecture pattern is a separation of concerns into functional blocks. Historically in the most simplest sense thought ECUs. More recently through consolidating functions into Zone or Domain Controllers. Possibly with a central Vehicle Computer orchestrating the wider vehicle processing. The figure below shows such an architecture.
+
+This supports a separation of concerns with each zone having its own VSS Data Store and sharing data as appropriate. This allows high data volumes to be captured within the zone if required, processed if necessary to determine some high level insight, and some low volume data to be shared with the central Vehicle Computer. An ADAS Controller may be recording data at millisecond intervals for processing but reporting high level events to the central Vehicle Computer.
+
 ![Zonal VSS Data Store](doc/apache-iotdb-zonal-vss-store.drawio.svg)
 
-### Deployment Notepad
-#### Central (ECU) data store running IoTDB Engine
-In-vehicle IoTDB Server with TS Files. Feed by TS-File Sync and or IoTDB Clients.
+#### Investigation Points
+How much data is shared between zones and how is in part a matter for detailed product architecture but some general design pattern ideas can be investigated.
+- [ ] Protocol for sharing between zones. Share using: 1) DB features to directly share between DB Servers (direct storage backend comms). Its expected that DB will have strong features for coordinating large data volumes 2) via VSS Data Servers, e.g. using VISS protocol 'Set' method, Controller A uses VISS Client to update Controller B. Currently VISS/VSS has no efficient binary protocol serialisation, but that is being worked on.
+- [ ] Ability for DB APIs to share differing amounts of data. Full vs partial synch/replication/transfer.
 
-#### Domain/Zone ECU data store
-Possibly multi-server, with optional sync/replication.
-
-+ve: Possibility of local high performance query.
-
-+ve: Possibility of separation of concerns. Zone process and transmit less to central/cloud.
-
-#### Slim function ECU with DB store
-feeder=>IoTDB write to TS-File, Sync TS-File
-
-+ve: Transmitting compressed data.
-
-#### Slim function ECU with DB client
-feeder=>IoTDB Client=>IoTDB Server
 
 ## Schema / Query
 
