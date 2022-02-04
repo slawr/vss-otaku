@@ -27,7 +27,7 @@ The figure shows Apache IoTDB acting as the storage backend for a VSS Data Store
 ![VSS Data Store for Data Server](doc/apache-iotdb-dataserver-store.drawio.svg)
 
 ### Deployment illustration: Zonal VSS Data Stores
-A common automotive architecture pattern is a separation of concerns into functional blocks. Historically in the most simplest sense thought ECUs. More recently through consolidating functions into Zone or Domain Controllers. Possibly with a central Vehicle Computer orchestrating the wider vehicle processing. The figure below shows such an architecture.
+A common automotive architecture pattern is a separation of concerns into functional blocks. Historically in the most simplest sense through ECUs. More recently through consolidating functions into Zone or Domain Controllers. Possibly with a central Vehicle Computer orchestrating the wider vehicle processing. The figure below shows such an architecture.
 
 This supports a separation of concerns with each zone having its own VSS Data Store and sharing data as appropriate. This allows high data volumes to be captured within the zone if required, processed if necessary to determine some high level insight, and some low volume data to be shared with the central Vehicle Computer. An ADAS Controller may be recording data at millisecond intervals for processing but reporting high level events to the central Vehicle Computer.
 
@@ -44,3 +44,7 @@ How much data is shared between zones and how is in part a matter for detailed p
 IoTDB allows you to both set a DB schema and ask the DB to derive for you. In the former case there is scope for vss-tool type tooling to generate a schema from a data model definition.
 
 It is stating the obvious but of course a Timeseries DB allows for rich querying of the data in an efficient manner. IoTDB allows for the possibility for that to occur in-vehicle, without precluding further processing in the cloud.
+
+### Investigation Points
+- [ ] Automated VSS to IoTDB schema generation, ideally using the vss-tools design pattern.
+- [ ] Interfacing IoTDB queries to VSS Data Servers, e.g. VISS and GraphQL.
