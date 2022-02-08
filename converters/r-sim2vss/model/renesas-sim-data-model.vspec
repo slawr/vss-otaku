@@ -1,0 +1,592 @@
+#
+# (C) 2021 Renesas Electronics
+#
+
+# Status: In development. Model may not match all possible simulator output.
+# VSS data model version: v2.2+ (commit 14e59425c12d)
+# Simulator data model version: Connected SDK v1.6
+
+# Open points:
+# 1. Confirm need or not for single/double quotes with string enums
+# 2. arg.geometry.coordinates:.PosType need to be specified or not
+# 3. Specifying default for sensor allowed values.
+# 4. MPH is missing from units.
+# 5. Confirm attribute or sensor type for each signal
+# 6. Handling empty string enum in vspec
+# 7. Confirm representation of "integer" data types, e.g. is Timestamp a uint32?
+
+arg:
+ type: branch
+ description: FIXME_DESC
+
+arg.Ver:
+  datatype: string
+  type: attribute
+  default: 001
+  allowed: [ 001, 001e, 001f ]  # FIXME: Check if single quotes required.
+  description: Enumerated format version - 001=Drive data, 001e=Emotion data, 001f=DMS data
+
+arg.Timestamp:
+  datatype: uint32
+  type: attribute
+  unit: ms
+  description: Unix Epoch Time(sec) extended to msec
+
+arg.geometry:
+  type: branch
+  description: FIXME_DESC
+
+arg.geometry.coordinates:
+  type: branch
+  description: FIXME_DESC
+
+arg.geometry.coordinates.Latitude:
+  datatype: float
+  type: sensor
+  description: Current latitude of vehicle specified to five decimal places e.g. 139.7744703 => 139.77447
+
+arg.geometry.coordinates.Longitude:
+  datatype: float
+  type: sensor
+  description: Current longitude of vehicle specified to five decimal places e.g. 139.7744703 => 139.77447
+
+arg.geometry.coordinates.Altitude:
+  datatype: float
+  type: sensor
+  unit: m
+  description: Current altitude of vehicle specified to three decimal places e.g. 76.895
+
+arg.geometry.coordinates.HorizAccu:
+  datatype: float
+  type: sensor
+  unit: m
+  description: Accuracy level of the latitude and longitude to one decimal place e.g. 1.3
+
+arg.geometry.coordinates.AltAccu:
+  datatype: float
+  type: sensor
+  unit: m
+  description: Accuracy level of the altitude to one decimal place e.g. 123.7
+
+arg.geometry.coordinates.Heading:
+  datatype: float
+  type: sensor
+  min: 0
+  max: 360
+  unit: degrees
+  description: Current magnetic compass heading to three decimal places e.g. 76.099
+
+arg.geometry.coordinates.HeadingAccu:
+  datatype: float
+  type: sensor
+  unit: degrees
+  description: Accuracy level of the heading to one decimal place e.g. 2.7
+
+arg.geometry.coordinates.Speed:
+  datatype: float
+  type: sensor
+  unit: m/s     # FIXME check unit
+  description: Vehicle speed to one decimal place e.g. 13.8
+
+arg.geometry.coordinates.SpeedAccu:
+  datatype: float
+  type: sensor
+  unit: m/s     # FIXME check unit
+  description: Accuracy level of the vehicle speed to one decimal place e.g. 0.7
+
+# FIXME. arg.geometry.coordinates:.PosType. Is it actually sent? It's a fixed value in list but not seen yet in json data
+
+arg.geometry.TrafficInfo:
+  type: branch
+  description: FIXME_DESC
+
+arg.geometry.TrafficInfo.SegmentLane:
+  datatype: string
+  type: sensor
+  description: Concatenation of the SementID and the LaneID of the current vehicle location e.g. "N1-B1-U-L1"
+
+arg.geometry.TrafficInfo.Intersection:
+  datatype: string
+  type: sensor
+  description: Intersection ID of the current vehicle location. Empty string ("") outside of the intersection.
+
+arg.RunningStatus:
+  type: branch
+  description: FIXME_DESC
+
+arg.RunningStatus.Acceleration:
+  type: branch
+  description: FIXME_DESC
+
+arg.RunningStatus.Acceleration.X:
+  datatype: float
+  unit: m/s^2
+  type: sensor
+  description: Longitudinal G-Force to three decimal places e.g. 0.014
+
+arg.RunningStatus.Acceleration.Y:
+  datatype: float
+  unit: m/s^2
+  type: sensor
+  description: Lateral G-Force to three decimal places e.g. -0.014
+
+arg.RunningStatus.Acceleration.Z:
+  datatype: float
+  unit: m/s^2
+  type: sensor
+  description: Vertical G-Force to three decimal places e.g. 1.097
+
+arg.RunningStatus.Vehicle:
+  type: branch
+  description: FIXME_DESC
+
+arg.RunningStatus.Vehicle.Speed:
+  datatype: uint32
+  type: sensor
+  min: 0
+  unit: km/h    # FIXME: fix missing mph
+  description: Current vehicle speed in MPH e.g. 30
+
+arg.RunningStatus.Engine:
+  type: branch
+  description: FIXME_DESC
+
+arg.RunningStatus.Engine.Speed:
+  datatype: uint32
+  type: sensor
+  min: 0
+  unit: rpm
+  description: Current engine speed in RPM e.g. 2000
+
+arg.RunningStatus.Brake:
+  type: branch
+  description: FIXME_DESC
+
+arg.RunningStatus.Brake.PedalPosition:
+  datatype: uint32
+  type: sensor
+  min: 0
+  max: 100
+  unit: percent
+  description: Current brake pedal position in percent (0=Not Depressed, 100=Fully Depressed) e.g. 100
+
+arg.RunningStatus.Accelerator:
+  type: branch
+  description: FIXME_DESC
+
+arg.RunningStatus.Accelerator.PedalPosition:
+  datatype: uint32
+  type: sensor
+  min: 0
+  max: 100
+  unit: percent
+  description: Current brake pedal position in percent (0=Not Depressed, 100=Fully Depressed) e.g. 100
+
+arg.RunningStatus.Fuel:
+  type: branch
+  description: FIXME_DESC
+
+arg.RunningStatus.Fuel.Level:
+  datatype: uint32
+  type: sensor
+  min: 0
+  max: 100
+  unit: percent
+  description: Current fuel level in percent e.g. 36
+
+arg.RunningStatus.SteeringWheel:
+  type: branch
+  description: FIXME_DESC
+
+arg.RunningStatus.SteeringWheel.Angle:
+  datatype: uint32
+  type: sensor
+  unit: degrees
+  description: Current steering wheel angle in degrees e.g. 10
+
+arg.RunningStatus.Transmission:
+  type: branch
+  description: FIXME_DESC
+
+arg.RunningStatus.Transmission.Gear:
+  datatype: int32
+  type: sensor
+#  min: -1
+#  max: 3
+#  default: 0   # FIXME. Confirm default
+  allowed: [ -1, 0, 1, 2, 3 ]
+  description: Enumerated gear position (-1=Reverse, 0=Neutral, 1=Parking, 2=Low, 3=Drive)
+
+arg.RunningStatus.ParkingBrake:
+  type: branch
+  description: FIXME_DESC
+
+arg.RunningStatus.ParkingBrake.IsEngaged:
+  datatype: boolean
+  type: sensor
+  unit: degrees
+  description: Indicates whether the parking brake is engaged or not
+
+arg.RunningStatus.Battery:
+  type: branch
+  description: FIXME_DESC
+
+arg.RunningStatus.Battery.Capacity:
+  datatype: uint32
+  type: sensor
+  min: 0
+  max: 100
+  unit: percent
+  description: Indicates the current battery capacity in percentage e.g. 60
+
+arg.Body:
+  type: branch
+  description: FIXME_DESC
+
+arg.Body.Door:
+  type: branch
+  instances:
+    - FrontLeft
+    - FrontRight
+    - RearLeft
+    - RearRight
+  description: FIXME_DESC
+
+arg.Body.Door.IsOpen:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the door is open or not
+
+arg.Body.Door.IsLocked:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the door is locked or not
+
+arg.Body.Door.WindowPosition:
+  datatype: uint32
+  type: sensor
+  min: 0
+  max: 100
+  unit: percent
+  description: Current window position in percent e.g. 100
+
+arg.Body.Door.IsMirrorOpen:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the door mirror is open (drive position) or not
+
+arg.Body.Bonnet:
+  type: branch
+  description: FIXME_DESC
+
+arg.Body.Bonnet.IsOpen:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the bonnet is open or not
+
+arg.Body.Trunk:
+  type: branch
+  description: FIXME_DESC
+
+arg.Body.Trunk.IsOpen:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the trunk is open or not
+
+arg.Body.Light:
+  type: branch
+  description: FIXME_DESC
+
+arg.Body.Light.IsHazardOn:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the hazard lights are on
+  
+arg.Body.Light.IsLowBeamOn:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the low beam of the headlights is on
+
+arg.Body.Light.IsHighBeamOn:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the high beam of the headlights is on
+
+arg.Body.Light.IsFrontFogOn:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the front fog light is on
+
+  arg.Body.Light.IsRearFogOn:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the rear fog light is on
+
+arg.Body.Wiper:
+  type: branch
+  description: FIXME_DESC
+
+arg.Body.Wiper.Front:
+  type: branch
+  description: FIXME_DESC
+
+arg.Body.Wiper.Front.Status:
+  datatype: string
+  type: sensor
+#  default: off   # FIXME - vpsec rules do not allow default for sensor type
+  allowed: [ off, slow, medium, fast, interval ]
+  description: Enumerated front wiper status as a string (off/slow/medium/fast/interval)
+
+arg.Body.Wiper.Rear:
+  type: branch
+  description: FIXME_DESC
+
+arg.Body.Wiper.Rear.Status:
+  datatype: string
+  type: sensor
+#  default: "off"   # FIXME - vpsec rules do not allow default for sensor type
+  allowed: [ 'off', 'slow', 'medium', 'fast', 'interval' ]
+  description: Enumerated rear wiper status as a string (off/slow/medium/fast/interval)
+
+arg.Body.FuelCap:
+  type: branch
+  description: FIXME_DESC
+
+arg.Body.FuelCap.IsOpen:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the fuel cap is open or not
+
+arg.Cabin:
+  type: branch
+  description: FIXME_DESC
+
+# The VSS v2.2 rule set currently does not allow specialisation of instances
+# so we can not use the instance feature to repeat the nodes for each set as
+# the rear seats do not have an air bag. So the branches are written out in
+# longhand.
+arg.Cabin.Seat:
+  type: branch
+  description: FIXME_DESC
+
+arg.Cabin.Seat.FrontLeft:
+  type: branch
+  description: FIXME_DESC
+
+arg.Cabin.Seat.FrontLeft.Recline:
+  datatype: uint32
+  type: sensor
+  min: 0
+  max: 180
+  unit: degrees
+  description: Current seat recline position in degrees (0-180 range) e.g. 20
+
+arg.Cabin.Seat.FrontLeft.IsSeatbeltOn:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the seat belt is engaged
+
+arg.Cabin.Seat.FrontLeft.IsAirbagDeployed:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the air bag has been deployed
+
+arg.Cabin.Seat.FrontRight:
+  type: branch
+  description: FIXME_DESC
+
+arg.Cabin.Seat.FrontRight.Recline:
+  datatype: uint32
+  type: sensor
+  min: 0
+  max: 180
+  unit: degrees
+  description: Current seat recline position in degrees (0-180 range) e.g. 20
+
+arg.Cabin.Seat.FrontRight.IsSeatbeltOn:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the seat belt is engaged
+
+arg.Cabin.Seat.FrontRight.IsAirbagDeployed:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the air bag has been deployed
+
+arg.Cabin.Seat.RearLeft:
+  type: branch
+  description: FIXME_DESC
+
+arg.Cabin.Seat.RearLeft.Recline:
+  datatype: uint32
+  type: sensor
+  min: 0
+  max: 180
+  unit: degrees
+  description: Current seat recline position in degrees (0-180 range) e.g. 20
+
+arg.Cabin.Seat.RearLeft.IsSeatbeltOn:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the seat belt is engaged
+
+arg.Cabin.Seat.RearRight:
+  type: branch
+  description: FIXME_DESC
+
+arg.Cabin.Seat.RearRight.Recline:
+  datatype: uint32
+  type: sensor
+  min: 0
+  max: 180
+  unit: degrees
+  description: Current seat recline position in degrees (0-180 range) e.g. 20
+
+arg.Cabin.Seat.RearRight.IsSeatbeltOn:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the seat belt is engaged
+
+arg.Cabin.HVAC:
+  type: branch
+  instances:
+    - FrontLeft
+    - FrontRight
+    - RearLeft
+    - RearRight
+    - AmbientAir
+  description: FIXME_DESC
+
+arg.Cabin.HVAC.Temperature:
+  datatype: float
+  unit: celsius
+  type: sensor
+  description: Current temperature in celsius e.g. 24.5
+
+arg.Cabin.Sunroof:
+  type: branch
+  description: FIXME_DESC
+
+arg.Cabin.Sunroof.Position:
+  datatype: uint32
+  type: sensor
+  min: 0
+  max: 100
+  unit: percent
+  description: Indicates the current sunroof position in percentage e.g. 60
+
+arg.DriveTrain:
+  type: branch
+  description: FIXME_DESC
+
+arg.DriveTrain.Tire:
+  type: branch
+  instances:
+    - FrontLeft
+    - FrontRight
+    - RearLeft
+    - RearRight
+  description: FIXME_DESC
+
+arg.DriveTrain.Tire.Pressure:
+  type: sensor
+  datatype: uint32
+  unit: kPa
+  description: Tire pressure in kpa e.g. 250
+
+arg.Navigation:
+  type: branch
+  description: FIXME_DESC
+
+arg.Navigation.SpeedLimit:
+  datatype: uint32
+  min: 0
+  unit: km/h
+  type: sensor
+  description: Speed limit at the current location e.g. 60
+
+arg.Navigation.Turn:
+  type: branch
+  description: FIXME_DESC
+
+arg.Navigation.Turn.Direction:
+  datatype: string
+  type: sensor
+  allowed: [ right, left, straight, "" ]    # FIXME - confirm how to handle empty string in vspec
+  description: Enumerated string ("right", "left", "straight", "") representing turn direction 'arrow' at next junction
+
+arg.Navigation.Turn.Angle:
+  datatype: uint32
+  min: 0
+  max: 180
+  type: sensor
+  description: Angle of the upcoming turn at the next junction
+
+arg.Navigation.Curve:
+  type: branch
+  description: FIXME_DESC
+
+arg.Navigation.Curve.Direction:
+  datatype: string
+  type: sensor
+  allowed: [ right, left, "" ]    # FIXME - confirm how to handle empty string in vspec
+  description: Enumerated string ("right", "left", "") representing the direction of a curve direction 'arrow'
+
+arg.Navigation.Curve.Level:
+  datatype: string
+  type: sensor
+  allowed: [ gentle, normal, sharp, "" ]    # FIXME - confirm how to handle empty string in vspec
+  description: Enumerated string representing how sharp the curve is
+
+arg.Event:
+  type: branch
+  description: FIXME_DESC
+
+arg.Event.Unstable:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether the vehicle is being driven erratically (true=erratic)
+
+arg.Event.RedLight:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether vehicle detected that a red light was ignored (true=ignored)
+
+arg.Event.Tire:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether a tire inflation warning is enabled (true=enabled)
+
+arg.Event.Pedestrian:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether a pedestrian has been detected (true=detected)
+
+arg.Event.Accident:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether an accident has been detected (true=detected)
+
+arg.Event.Approaching:
+  type: branch
+  description: FIXME_DESC
+
+arg.Event.Approaching.Front:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether an near by object is approaching from the front
+
+arg.Event.Approaching.Rear:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether an near by object is approaching from the rear
+
+arg.Event.Approaching.RearLeft:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether an near by object is approaching from the rear left
+
+arg.Event.Approaching.RearRight:
+  datatype: boolean
+  type: sensor
+  description: Indicates whether an near by object is approaching from the rear right
