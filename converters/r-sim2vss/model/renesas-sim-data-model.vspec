@@ -8,7 +8,7 @@
 
 # Open points:
 # 1. Confirm need or not for single/double quotes with string enums
-# 2. arg.geometry.coordinates:.PosType need to be specified or not
+# 2. arg.geometry.coordinates:.PosType need to be specified or not?
 # 3. Specifying default for sensor allowed values.
 # 4. MPH is missing from units.
 # 5. Confirm attribute or sensor type for each signal
@@ -103,7 +103,7 @@ arg.geometry.TrafficInfo:
 arg.geometry.TrafficInfo.SegmentLane:
   datatype: string
   type: sensor
-  description: Concatenation of the SementID and the LaneID of the current vehicle location e.g. "N1-B1-U-L1"
+  description: Concatenation of the SegmentID and the LaneID of the current vehicle location e.g. "N1-B1-U-L1"
 
 arg.geometry.TrafficInfo.Intersection:
   datatype: string
