@@ -1,0 +1,17 @@
+#
+# (C) 2021 Renesas Electronics
+#
+
+# 
+
+what units were missing:
+ms -added
+m/s - added
+unix time in ms but actually covered by ms unit, i.e. ms is unit rather than some unix time unit varient
+
+actually missing:
+mph
+
+Unusual abstract:
+arg.geometry.TrafficInfo.SegmentLane
+arg.geometry.TrafficInfo.Intersection
