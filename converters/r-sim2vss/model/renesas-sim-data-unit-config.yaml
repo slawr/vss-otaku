@@ -2,7 +2,9 @@
 # (C) 2021 Renesas Electronics
 #
 
-# 
+# FIXME: "Source" data units not in the VSS standard catalog will eventually 
+# be stored here to avoid polluting VSS with units from everything it might be
+# interfaced with.
 
 what units were missing:
 ms -added
