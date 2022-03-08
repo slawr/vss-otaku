@@ -7,13 +7,24 @@
 
 import asyncio
 from websockets import serve
+import json
+from r_sim2vss_translater import translate
 
-async def echo(websocket):
+
+# simple service configuration
+ws_port = 8765
+ws_ip = 'localhost'
+
+
+async def handler(websocket):
     async for message in websocket:
-        await websocket.send(message)
+        msg = json.loads(message)
+        sim_payload = msg['arg']
+
 
 async def main():
-    async with serve(echo, "localhost", 8765):
+    async with serve(handler, "localhost", 8765):
         await asyncio.Future()  # run forever
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
