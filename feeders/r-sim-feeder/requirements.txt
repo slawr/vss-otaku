@@ -1,0 +1,6 @@
+# FIXME: This is just a manual list currently of major requirements.
+#        Needs later conversion to proper packaging list.
+asyncio
+websockets
+json
+apache-iotdb
