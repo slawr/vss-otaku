@@ -24,7 +24,6 @@ def translate_geometry(arg):
         }
     ]
 
-
 def translate(arg):
     result = []
     result += translate_geometry(arg['geometry'])
