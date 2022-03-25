@@ -2,6 +2,38 @@
 
 Components to allow the Renesas Simulator to act as a VSS Data Feeders to VSS Data Servers such as VISS or GraphQL.
 
+# Apache IoTDB VSS Data Store Feeder
+## Design
+TBA
+## Source
+| Module | Description |
+| ------------- | ------------- |
+r_sim2apache_iotdb_feeder.py | The feeder "main" process
+r_sim2vss_translater.py | Simulator to VSS data model conversion
+iotdb_connector.py | Connector to the Apache IoTDB database
+## Configuration
+Configuration is currently handled simply, using variables directly at the top of the python modules.
+
+At the top of iotdb_connector.py are the DB connection settings and schema for the timeseries data. At the top of r_sim2apache_iotdb_feeder.py the websocket server settings.
+
+## Service startup
+
+In the Simulator UI "Config" settings set the websocket server URL and port for the Feeder, save and restart the simulator.
+
+An example startup sequence
+1. Start IoTDB DB
+    ```
+    apache-iotdb-0.12.5-server-bin$ sbin/start-server.sh
+    ```
+2. Start Feeder
+    ```
+    vss-otaku/feeders/r-sim-feeder$ python3 r_sim2apache_iotdb_feeder.py
+    ```
+3. In the Simulator UI "Config" settings select the "generating vehicle data" checkbox for it to begin sending data.
+
+A simple way to check data is being written is to connect to your IoTDB DB using the IoTDB CLI and query the timeseries.
+
+# Design Discussion
 ## VISS approaches
 
 ### VISS Relay using VISS 'Set' method
@@ -50,4 +82,4 @@ Covesa has a collection of GraphQL components, e.g. [GraphQL Data Server](https:
 - [ ] Is the Resolver API a sufficient data fetch abstraction API or is something nearer to the data store required? For example changing between DB, 'simple' State Storage or 'read sensor/actuator' API.
 
 ## In-vehicle data store approaches
-Of course as well as the methods outlined above the Simulator could be interfaced by writing VSS data to an in-vehicle data store such as a Timeseries database. In that approach the Simulator does not need to be interfaced to a specific data server. The connection between the data store and the server takes care of that. This makes it an area of investigation in its own right and is being investigated in the "in-vehicle-storage" area of this project. See the [README.md](../in-vehicle-storage/README.md)
+Of course as well as the methods outlined above the Simulator could be interfaced by writing VSS data to an in-vehicle data store such as a Timeseries database. In that approach the Simulator does not need to be interfaced to a specific data server. The connection between the data store and the server takes care of that. This makes it an area of investigation in its own right and is being investigated in the "in-vehicle-storage" area of this project. See the [README.md](../../in-vehicle-storage/apache-iotdb/README.md)
