@@ -9,23 +9,16 @@
 # Simulator data model version: Connected SDK v1.6
 
 def translate_geometry(arg):
-    result = []
+    result = {}
 
-    return result + [
-        # arg.geometry.coordinates.Latitude
-        {
-            'path': 'Vehicle.CurrentLocation.Latitude',
-            'value': float(arg['coordinates']['Latitude'])
-        },
-        # arg.geometry.coordinates.Longitude
-        {
-            'path': 'Vehicle.CurrentLocation.Longitude',
-            'value': float(arg['coordinates']['Longitude'])
-        }
-    ]
+    # arg.geometry.coordinates.Latitude
+    result['Vehicle.CurrentLocation.Latitude'] = float(arg['coordinates']['Latitude'])
 
-def translate(arg):
-    result = []
-    result += translate_geometry(arg['geometry'])
+    # arg.geometry.coordinates.Longitude
+    result['Vehicle.CurrentLocation.Longitude'] = float(arg['coordinates']['Longitude'])
 
     return result
+
+# Return python dictionary of key/value pairs in the VSS data model
+def translate(arg):
+    return translate_geometry(arg['geometry'])

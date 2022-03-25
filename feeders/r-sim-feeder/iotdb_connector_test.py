@@ -7,18 +7,12 @@
 import iotdb_connector
 
 timestamp = 1637868968335
-data = [
-        # arg.geometry.coordinates.Latitude
-        {
-            'path': 'Vehicle.CurrentLocation.Latitude',
-            'value': -73.9873
-        },
-        # arg.geometry.coordinates.Longitude
-        {
-            'path': 'Vehicle.CurrentLocation.Longitude',
-            'value': 40.76579
-        }
-    ]
+data = {
+    # arg.geometry.coordinates.Latitude
+    'Vehicle.CurrentLocation.Latitude' : 40.76579,
+    # arg.geometry.coordinates.Longitude
+    'Vehicle.CurrentLocation.Longitude' : -73.9873
+    }
 
 if __name__ == "__main__":
     # Connect to the IoTDB Server

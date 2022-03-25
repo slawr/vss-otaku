@@ -20,18 +20,18 @@ session = Session(ip, port_, username_, password_, fetch_size=1024, zone_id="GMT
 device_id_ = "root.sg_test_01.d_01"
 
 # Simple schema
-vss_node_lst = [
+iotdb_vss_leaf_keys = [
     '"Vehicle.CurrentLocation.Latitude"',
     '"Vehicle.CurrentLocation.Longitude"',
 ]
 
-vss_node_type_lst = [
+iotdb_vss_value_types = [
     TSDataType.FLOAT,
     TSDataType.FLOAT,
 ]
 
-encoding_lst_ = [TSEncoding.PLAIN for _ in range(len(vss_node_type_lst))]
-compressor_lst_ = [Compressor.SNAPPY for _ in range(len(vss_node_type_lst))]
+encoding_lst_ = [TSEncoding.PLAIN for _ in range(len(iotdb_vss_value_types))]
+compressor_lst_ = [Compressor.SNAPPY for _ in range(len(iotdb_vss_value_types))]
 
 # Public Methods
 def create_time_series():
@@ -39,37 +39,27 @@ def create_time_series():
     # create_time_series() requires a list of full TS paths. Create one from
     # concatenation of device_id + vss leaf node keys
     ts_path_lst_ = []
-    for i in vss_node_lst:
-#        ts_path = ".".join([device_id_, i])
+    for i in iotdb_vss_leaf_keys:
         ts_path = '{}."{}"'.format(device_id_, i)
         ts_path_lst_ += {ts_path}
 
-    session.create_multi_time_series(ts_path_lst_, vss_node_type_lst, encoding_lst_, compressor_lst_)
+    session.create_multi_time_series(ts_path_lst_, iotdb_vss_value_types, encoding_lst_, compressor_lst_)
 
 def create_aligned_time_series():
     # FIXME: The multiple readings per timesclice delivered by the sim input
     # makes more sense for this feeder, but the API does not appear until
     # iotdb v0.13. Update to it when v0.13 released
     session.create_aligned_time_series(
-        device_id_, vss_node_lst, vss_node_type_lst, encoding_lst_, compressor_lst_
+        device_id_, iotdb_vss_leaf_keys, iotdb_vss_value_types, encoding_lst_, compressor_lst_
 )
 
-# FIXME: Little hack to get values from the data array. It works for this now but needs
-# replacing later with proper value lookup, i.e. replace this completly.
-def get_value(data, path):
-    for i in data:
-        if i['path'] == path:
-            return i['value']
-
+# Input: TS, dictionary of key/value pairs
 def insert_vss_ts(timestamp_, data):
     # Build array of VSS leaf node values
     values_ = []
-    for x in vss_node_lst:
-        # Strip double quotes used in IoTDB sensor name as it is not present in the data
-        x = x.strip('\"')
-        values_ += {get_value(data, x)}
+    values_ = list(data.values())
 
-    session.insert_record(device_id_, timestamp_, vss_node_lst, vss_node_type_lst, values_)
+    session.insert_record(device_id_, timestamp_, iotdb_vss_leaf_keys, iotdb_vss_value_types, values_)
 
 def open_session():
     session.open(False)
@@ -88,4 +78,4 @@ def vss_print_aligned(data):
         print(f'INSERT {i}')
 
 # Private Methods
-#def generate_type_mapping():
+#def generate_schema():
