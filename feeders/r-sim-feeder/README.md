@@ -2,9 +2,17 @@
 
 Components to allow the Renesas Simulator to act as a VSS Data Feeders to VSS Data Servers such as VISS or GraphQL.
 
-# Apache IoTDB VSS Data Store Feeder
+# Simulator to Apache IoTDB VSS Data Store Feeder
 ## Design
-TBA
+![Sim 2 Apache IoTDB Feeder](doc/apache-iotdb-feeder.drawio.svg)
+
+The Feeder is implemented as a websocket server. The simulator acts as a client sending its output via websocket. The data processing by the feeder is abstracted into two different modules, for data model conversion and a connector writing the data to the database. The IoTDB connector uses the IoTDB Native Session API to communicate with the IoTDB server.
+
+### Note on reuse
+Output from the conversion functions are simple python dictionary VSS key/value pairs that can be flexibly formatted as needed for further processing.
+
+This design allows some simple reusability. The websocket server and conversion can be reused as a design pattern for simulator input into the VSS eco-system. Here a "connector" is provided to write the data to an Apache IoTDB database acting as a VSS Data Store. However this connector could be easily replaced with another. For example a connector writing to an SQLite or Redis DB acting as state storage for the WAII VISS (VSS) Data Server.
+
 ## Source
 | Module | Description |
 | ------------- | ------------- |
