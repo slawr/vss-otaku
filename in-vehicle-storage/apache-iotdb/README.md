@@ -31,7 +31,7 @@ A common automotive architecture pattern is a separation of concerns into functi
 
 This supports a separation of concerns with each zone having its own VSS Data Store and sharing data as appropriate. This allows high data volumes to be captured within the zone if required, processed if necessary to determine some high level insight, and some low volume data to be shared with the central Vehicle Computer. An ADAS Controller may be recording data at millisecond intervals for processing but reporting high level events to the central Vehicle Computer.
 
-![Zonal VSS Data Store](doc/apache-iotdb-zonal-vss-store.drawio.svg)
+![Zonal VSS Data Store](doc/zonal-vss-store-cooperation.drawio.svg)
 
 #### Investigation Points
 How much data is shared between zones and how is in part a matter for detailed product architecture but some general design pattern ideas can be investigated.
