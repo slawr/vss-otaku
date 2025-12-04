@@ -37,7 +37,7 @@ COVESA projects in recent years have been investigating scaling the data model t
 
 For example, most recently the Vehicle Data Model project has been investigating evolving the data modelling itself with positive results [^vdm]. Whilst the Capabilities project has worked on standardising the properties of the vehicle seat abstracted from underlying hardware to reduce integration complexity and promote re-use [^capabilities-proj]. There are also ongoing projects focused on integrating the data modelling with adjacent industries such as commercial vehicles and insurance.
 
-[^capabilities-proj]: https://covesa.atlassian.net/wiki/x/FR5UAg
+[^capabilities-proj]: Details of the Capabilities project and its work on the seat domain can be found in the COVESA wiki [project page](https://covesa.atlassian.net/wiki/x/FR5UAg)
 
 Of course, experience tells us that successful technology transformations require more than just a technical solution. Social aspects such as communicating business benefit and design patterns as also required.
 
@@ -47,9 +47,9 @@ Having acknowledged that reality, in this article I wish to turn to the perspect
 
 To achieve that it would be helpful if a lightweight framework was available to guide development of both the technical *and* social needs of the artifacts. The intended outcome being improvements in sustaining growth, ability to respond to change, whilst delivering greater value. *I propose that the four interacting principals of Data Mesh be considered as the foundation for such a framework*.
 
-[^vss]: https://covesa.global/vehicle-signal-specification/
+[^vss]: A high level business focused introduction of VSS, including the problems it intends to solve, can be found in the [COVESA website](https://covesa.global/vehicle-signal-specification/). The project source, including the data model releases, can be found in [github](https://github.com/COVESA/vehicle_signal_specification), along with the online [documentation site](https://covesa.github.io/vehicle_signal_specification/).
 
-[^vdm]: https://covesa.atlassian.net/wiki/x/mQFUAg
+[^vdm]: The Vehicle Data Model (VDM) project has two major pillars, [Simplified Semantic Data Modeling (S2DM)](https://github.com/COVESA/s2dm) which provides the modelling language and tooling and [Vehicle Data Model (VDM)](https://github.com/COVESA/vdm) which creates domain data models using S2DM. Further information can be found in the project page in the [COVESA wiki](https://covesa.atlassian.net/wiki/x/mQFUAg).
 
 # Data Mesh and its four principals
 <!-- section outline:
@@ -92,7 +92,7 @@ The following sections discuss each principal in turn and illustrates how they m
 As Dehghani has written about the principals in more detail in the public domain for brevity I will only mention their key properties here. 
 Her writings are easily consumed and I encourage readers to read them for a more detailed view on data mesh itself [^dehghani-mesh-refs]. I will concentrate on illustrating them from a COVESA perspective.
 
-[^dehghani-mesh-refs]: Dehghani wrote two seminal data mesh articles on Martin Fowlers website. Starting with ["How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh"](https://martinfowler.com/articles/data-monolith-to-mesh.html) she refined her ideas in the follow up ["Data Mesh Principles and Logical Architecture"](https://martinfowler.com/articles/data-mesh-principles.html). From there she greatly expanded upon her thinking in the O'Reilly book ["Data Mesh"](https://www.oreilly.com/library/view/data-mesh/9781492092384/), from which Thoughtworks host the except ["Data Mesh in a Nutshell"](https://www.thoughtworks.com/content/dam/thoughtworks/documents/books/bk_data_mesh_excerpt.pdf).
+[^dehghani-mesh-refs]: Dehghani wrote two seminal data mesh articles on Martin Fowlers website. Starting with [*How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh*](https://martinfowler.com/articles/data-monolith-to-mesh.html) she refined her ideas in the follow up [*Data Mesh Principles and Logical Architecture*](https://martinfowler.com/articles/data-mesh-principles.html). From there she greatly expanded upon her thinking in the O'Reilly book [*Data Mesh*](https://www.oreilly.com/library/view/data-mesh/9781492092384/), from which Thoughtworks host the excerpt [*Data Mesh in a Nutshell*](https://www.thoughtworks.com/content/dam/thoughtworks/documents/books/bk_data_mesh_excerpt.pdf).
 
 # Principle of Domain Ownership
 Data mesh places data responsibility with the people who are closest to the data to support scaling structure and rapid change cycles. To identify the boundaries around which data is decomposed and integrated it looks to business domains, rather than partition around technology.
@@ -103,14 +103,14 @@ A bounded context is "the delimited applicability of a particular model [that] g
 
 [^ddd-intro-ref]: Vlad Khononov's book [*Learning Domain-Driven Design* (O’Reilly, 2021)](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/) gives a good practical introduction to both learning and implementing DDD.
 
-[^evans-bounded-context]: Eric Evans, Domain-Driven Design (p 511)
+[^evans-bounded-context]: Eric Evans, [*Domain-Driven Design* (Addison-Wesley, 2003)](https://www.informit.com/store/domain-driven-design-tackling-complexity-in-the-heart-9780321125217), p 511
 
 Dehghani defines three broad domain data archetypes [^dehghani-domain-archetypes], which could be useful classifications in COVESA discussions:
 1. **Source-aligned domain data**; Data reflecting business facts generated by operational systems. Also called *native* data.
 2. **Aggregate domain data**; Data that is an aggregate of multiple upstream domains.
 3. **Consumer-aligned domain data**; Data transformed to fit the needs of one or more specific use cases. Also called *fit-for-purpose* domain data.
 
-[^dehghani-domain-archetypes]: Dehghani, Data Mesh (p 20)
+[^dehghani-domain-archetypes]: Dehghani, [*Data Mesh* (O'Reilly, 2022)](https://www.oreilly.com/library/view/data-mesh/9781492092384/), p 20
 
 ## Interpretation in COVESA
 ### In general
@@ -120,7 +120,7 @@ Traditional engineering and monolithic in-vehicle ECUs with tightly coupled conn
 
 The Vehicle Data Model (VDM) project has been building the basis to allow the vehicle model to meet future demands. Particularly the need for greater expressivity, modularity and to be able to reference multiple models. VDM moves from the tree structure of VSS to a graph structure. The project is developing Simplified Semantic Data Modelling (S2DM) "an approach for modeling data of multiple domains that enables Subject Matter Experts to contribute to controlled vocabularies with minimal data modeling expertise" [^S2DM].
 
-[^S2DM]: https://covesa.github.io/s2dm/
+[^S2DM]: The source and online documentation for S2DM can be found in [github](https://covesa.github.io/s2dm/)
 
 With S2DM taking care of the semantics of modelling a remaining question is how to decompose the domains? COVESA needs a shared framework to develop the vocabulary, properties and boundaries of the models that will go into VDM. Domain-driven design (DDD) can help with that process.
 
